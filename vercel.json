@@ -1,11 +1,17 @@
 {
   "version": 2,
   "builds": [
-    { "src": "main.py", "use": "@vercel/python" }
+    {
+      "src": "main.py",
+      "use": "@vercel/python"
+    },
+    {
+      "src": "public/**/*",
+      "use": "@vercel/static"
+    }
   ],
   "routes": [
-    { "src": "/(.*)", "dest": "main.py" }
+    { "src": "/mcp.json", "dest": "/public/mcp.json" },
+    { "src": "/(.*)", "dest": "/main.py" }
   ]
 }
-
-
