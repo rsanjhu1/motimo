@@ -154,12 +154,15 @@ def mcp(question: str = Query(...)):
     else:
         return {"answer": "Hmm 🤔 I don't have that in my list yet — but keep going, you're doing great!"}
 
-from fastapi import Request  # add this import at the top if not already there
+from fastapi import Request
 
 @app.post("/mcp")
 async def mcp_post(request: Request):
-    data = await request.json()
-    question = data.get("question", "").lower()
+    try:
+        data = await request.json()
+        question = data.get("question", "").lower()
+    except Exception:
+        question = ""
     if question in responses:
         return {"answer": responses[question]}
     else:
