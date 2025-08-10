@@ -7,9 +7,5 @@
     { "src": "/(.*)", "dest": "main.py" }
   ]
 }
-{
-  "redirects": [
-    { "source": "/", "destination": "/motimo", "permanent": true }
-  ]
-}
+
 
