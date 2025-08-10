@@ -1,7 +1,6 @@
 {
   "id": "motimo",
-  "name": "Motimo MCP Server",
+  "name": "motimo",
   "description": "A friendly AI-powered mini life coach",
   "url": "https://motimo.vercel.app"
 }
-
