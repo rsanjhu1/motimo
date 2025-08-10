@@ -1,0 +1,10 @@
+{
+  "name": "motimo",
+  "version": "1.0.0",
+  "description": "My MCP server project",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {}
+}
