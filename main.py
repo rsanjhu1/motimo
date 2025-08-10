@@ -143,3 +143,14 @@ def motimo(query: Query):
 @app.get("/")
 def home():
     return {"message": "Welcome to Motimo — your Mini Life Coach! 🚀 Ask your motivational questions at /motimo."}
+
+from fastapi import Query
+
+@app.get("/mcp")
+def mcp(question: str = Query(...)):
+    q = question.lower()
+    if q in responses:
+        return {"answer": responses[q]}
+    else:
+        return {"answer": "Hmm 🤔 I don't have that in my list yet — but keep going, you're doing great!"}
+
